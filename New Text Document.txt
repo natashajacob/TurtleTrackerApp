@@ -1,14 +1,3 @@
-#-------------------------------------------------------------
-# ARGOSTrackingTool.py
-#
-# Description: Reads in an ARGOS tracking data file and allows
-#   the user to view the location of the turtle for a specified
-#   date entered via user input.
-#
-# Author: John Fay (john.fay@duke.edu)
-# Date:   Fall 2022
-#--------------------------------------------------------------
-
 # Ask the user for a date, specifying the format
 user_date = input("Enter a date (M/D/YYYY):")
 
@@ -62,10 +51,7 @@ for the_key, the_value in date_dict.items():
     if the_value == user_date:
         matching_keys.append(the_key)
 
-# Report whether no keys were found
-if len(matching_keys) == 0:
-    print(f"Sara was not located on {user_date}")
-    
+
 #Reveal locations for each key in matching_keys
 for matching_key in matching_keys:
     obs_lat, obs_lon = location_dict[matching_key]
